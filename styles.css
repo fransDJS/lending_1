@@ -1,0 +1,73 @@
+body {
+  background: #232323;
+  margin: 0;
+  padding: 40px;
+  font-family: 'DM Sans', Arial, sans-serif;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 384px);
+  gap: 24px;
+  justify-content: center;
+}
+
+.review {
+  width: 384px;
+  background: #000000;
+  border-radius: 32px;
+  padding: 40px 32px 32px 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.rewiew-stars {
+  font-size: 20px;
+  margin-bottom: 24px;
+  letter-spacing: 2px;
+}
+
+.review-text {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  color: #FFFFFF;
+  margin-top: 0;
+  margin-bottom: 24px;
+  letter-spacing: 0;
+  word-break: break-word;
+  /* Текст переносится естественно, без ограничений по строкам */
+}
+
+.rewiew-author {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0;
+  margin-top: 0;
+}
+
+@media (max-width: 1200px) {
+  .reviews-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .reviews-grid {
+      grid-template-columns: 1fr;
+  }
+  .review {
+      max-width: 100%;
+      min-width: 0;
+  }
+  body {
+      padding: 10px;
+  }
+}
+
